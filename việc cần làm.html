@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-theme="light">
+    <main class="app">
+      <header>
+        <div class="header-top">
+          <h1>Todo List</h1>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Chuyển chế độ tối"
+            aria-pressed="false"
+          >
+            <span class="toggle-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <form id="todo-form" autocomplete="off">
+          <input
+            id="todo-input"
+            type="text"
+            name="todo"
+            placeholder="Nhập việc cần làm..."
+            aria-label="New todo"
+            required
+          >
+          <button type="submit">Thêm</button>
+        </form>
+      </header>
+
+      <section>
+        <ul id="todo-list" aria-live="polite"></ul>
+      </section>
+
+      <footer>
+        <span id="todo-count">0 việc</span>
+        <button id="clear-completed" type="button">Xóa việc đã xong</button>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
